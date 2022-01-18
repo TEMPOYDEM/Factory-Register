@@ -85,7 +85,7 @@
     <ShellItem Route="LoginPage" FlyoutItemIsVisible="False">
         <ShellContent ContentTemplate="{DataTemplate local:LoginPage}" />
     </ShellItem>
-    <FlyoutItem Title="Добавить элементы" Icon="icon_about.png">
+    <FlyoutItem Title="Главная" Icon="icon_about.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
     </FlyoutItem>
     <FlyoutItem Title="Список" Icon="List.png">

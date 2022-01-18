@@ -53,7 +53,19 @@ namespace Factory_Register.ViewModels
                         {
                             DisplayInvalidLoginPrompt();
                         }
+                        else
+                        {
+                            await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+                        }
                     }
+                    else
+                    {
+                        await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+                    }
+                }
+                else
+                {
+                    await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
                 }
             }
             

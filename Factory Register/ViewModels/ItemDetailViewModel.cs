@@ -80,6 +80,7 @@ namespace Factory_Register.ViewModels
         {
 
             await DataStore.DeleteItemAsync(ItemId);
+            await Shell.Current.GoToAsync("..");
             await App.Current.MainPage.DisplayAlert("Удаление завершено", "Вы можете покинуть страницу", "OK");
 
         }

@@ -1,26 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:Factory_Register.ViewModels" x:DataType="viewmodels:ItemDetailViewModel"
              x:Class="Factory_Register.Views.ItemDetailPage"
              Title="{Binding Title}">
     <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Сохранить" Command="{Binding SaveItemCommand}" />
         <ToolbarItem Text="Удалить" Command="{Binding DeleteItemCommand}" />
     </ContentPage.ToolbarItems>
     <StackLayout Spacing="20" Padding="15">
         <Label Text="Название:" FontSize="Medium" />
-        <Label Text="{Binding Name}" FontSize="Small"/>
+        <Entry Text="{Binding Name, Mode=TwoWay}" FontSize="Small"/>
         <Label Text="Описание:" FontSize="Medium" />
-        <Label Text="{Binding Description}" FontSize="Small"/>
+        <Entry Text="{Binding Description, Mode=TwoWay}" FontSize="Small"/>
         <Label Text="Расположение:" FontSize="Medium" />
-        <Label Text="{Binding Location}" FontSize="Small"/>
+        <Entry Text="{Binding Location, Mode=TwoWay}" FontSize="Small"/>
         <Label Text="Дата:" FontSize="Medium" />
-        <Label Text="{Binding Date}" FontSize="Small"/>
+        <Entry Text="{Binding Date, Mode=TwoWay}" FontSize="Small"/>
         <Label Text="Цена:" FontSize="Medium" />
-        <Label Text="{Binding Price}" FontSize="Small"/>
-        <Label Text="Количество:" FontSize="Medium" />
-        <Label Text="{Binding Quantity}" FontSize="Small"/>
-        <Label Text="Общая стоимость:" FontSize="Medium" />
-        <Label Text="{Binding Totalcost}" FontSize="Small"/>
+        <Entry Text="{Binding Price, Mode=TwoWay}" FontSize="Small"/>
+        <Label Text="Инвентарный номер:" FontSize="Medium" />
+        <Label Text="{Binding Id, Mode=TwoWay}" FontSize="Small"/>
     </StackLayout>
     
 </ContentPage>

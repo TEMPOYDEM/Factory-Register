@@ -13,9 +13,8 @@ namespace Factory_Register.ViewModels
         private string name;
         private string description;
         private string location;
-        private string date;
+        private DateTime date;
         private int price;
-        private int quantity;
 
         public NewItemViewModel()
         {
@@ -28,8 +27,8 @@ namespace Factory_Register.ViewModels
 
         private bool ValidateSave()
         {
-            return !String.IsNullOrWhiteSpace(name)
-                && !String.IsNullOrWhiteSpace(description) && !String.IsNullOrWhiteSpace(location) && !String.IsNullOrWhiteSpace(date) && !String.IsNullOrWhiteSpace(Convert.ToString(price)) && !String.IsNullOrWhiteSpace(Convert.ToString(quantity));
+            return !this.Equals(null);
+                
         }
 
         public string Name
@@ -48,7 +47,7 @@ namespace Factory_Register.ViewModels
             get => location;
             set => SetProperty(ref location, value);
         }
-        public string Date
+        public DateTime Date
         {
             get => date;
             set => SetProperty(ref date, value);
@@ -58,11 +57,7 @@ namespace Factory_Register.ViewModels
             get => price;
             set => SetProperty(ref price, value);
         }
-        public int Quantity
-        {
-            get => quantity;
-            set => SetProperty(ref quantity, value);
-        }
+
 
         public Command SaveCommand { get; }
         public Command CancelCommand { get; }
@@ -75,10 +70,9 @@ namespace Factory_Register.ViewModels
 
         private async void OnSave()
         {
-            if (Price == 0 || Quantity == 0)
+            if (Price <= 0)
             {
-                await App.Current.MainPage.DisplayAlert("Ошибка", "Вы не заполнили цену или количество", "OK");
-
+                await App.Current.MainPage.DisplayAlert("Ошибка", "Вы не заполнили цену", "OK");
             }
             else
             {
@@ -91,15 +85,14 @@ namespace Factory_Register.ViewModels
                         Location = Location,
                         Date = Date,
                         Price = Price,
-                        Quantity = Quantity,
-                        Totalcost = Quantity * Price,
+
                     };
                     await DataStore.AddItemAsync(newItem);
                     await Shell.Current.GoToAsync("..");
                 }
                 catch
                 {
-                    await App.Current.MainPage.DisplayAlert("Ошибка", "Не удаётся считать данные данные", "OK");
+                    await App.Current.MainPage.DisplayAlert("Ошибка", "Не удаётся считать данные", "OK");
                 }
             }
 

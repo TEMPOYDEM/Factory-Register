@@ -15,11 +15,9 @@
             <Label Text="Расположение" FontSize="Medium" />
             <Entry Text="{Binding Location, Mode=TwoWay}" FontSize="Medium" />
             <Label Text="Дата" FontSize="Medium" />
-            <Editor Text="{Binding Date, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+            <DatePicker Date="{Binding Date, Mode=TwoWay}" FontSize="Medium" Margin="0" />
             <Label Text="Цена" FontSize="Medium" />
             <Entry Text="{Binding Price, Mode=TwoWay}" FontSize="Medium" />
-            <Label Text="Количество" FontSize="Medium" />
-            <Editor Text="{Binding Quantity, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
             <StackLayout Orientation="Horizontal">
                 <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
                 <Button Text="Save" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>

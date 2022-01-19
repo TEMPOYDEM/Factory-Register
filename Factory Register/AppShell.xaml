@@ -85,12 +85,13 @@
     <ShellItem Route="LoginPage" FlyoutItemIsVisible="False">
         <ShellContent ContentTemplate="{DataTemplate local:LoginPage}" />
     </ShellItem>
-    <FlyoutItem Title="Главная" Icon="icon_about.png">
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
-    </FlyoutItem>
     <FlyoutItem Title="Список" Icon="List.png">
         <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
     </FlyoutItem>
+    <FlyoutItem Title="Главная" Icon="icon_about.png">
+        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
+    </FlyoutItem>
+
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
     <MenuItem Icon="off.png" Text="Выйти из аккаунта" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">

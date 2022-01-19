@@ -55,23 +55,23 @@ namespace Factory_Register.ViewModels
                         }
                         else
                         {
-                            await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+                            await Shell.Current.GoToAsync($"//{nameof(ItemsPage)}");
                         }
                     }
                     else
                     {
-                        await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+                        await Shell.Current.GoToAsync($"//{nameof(ItemsPage)}");
                     }
                 }
                 else
                 {
-                    await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+                    await Shell.Current.GoToAsync($"//{nameof(ItemsPage)}");
                 }
             }
             
             else
             {
-                await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+                await Shell.Current.GoToAsync($"//{nameof(ItemsPage)}");
             }
         }
     }

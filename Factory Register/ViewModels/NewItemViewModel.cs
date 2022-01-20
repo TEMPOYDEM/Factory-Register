@@ -27,7 +27,7 @@ namespace Factory_Register.ViewModels
 
         private bool ValidateSave()
         {
-            return !
+            return !this.Equals(null);
                 
         }
 

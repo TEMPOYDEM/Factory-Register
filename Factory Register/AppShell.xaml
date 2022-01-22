@@ -88,8 +88,11 @@
     <FlyoutItem Title="Список" Icon="List.png">
         <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Главная" Icon="icon_about.png">
+    <FlyoutItem Title="О приложении" Icon="icon_about.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Поиcк" Icon="Search.png">
+        <ShellContent Route="SearchBarXamlPage" ContentTemplate="{DataTemplate local:SearchBarXamlPage}" />
     </FlyoutItem>
 
 

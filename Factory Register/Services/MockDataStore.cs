@@ -27,8 +27,9 @@ namespace Factory_Register.Services
         {
             _sqlConn = DependencyService.Get<SQLConn>().DatabaseService();
             _sqlConn.CreateTable<Item>();
+
         }
-        
+
 
         public async Task<bool> AddItemAsync(Item item)
         {

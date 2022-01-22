@@ -1,5 +1,4 @@
-﻿using Factory_Register.ViewModels;
-using Factory_Register.Views;
+﻿using Factory_Register.Views;
 using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
@@ -11,6 +10,7 @@ namespace Factory_Register
         public AppShell()
         {
             InitializeComponent();
+            Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
         }

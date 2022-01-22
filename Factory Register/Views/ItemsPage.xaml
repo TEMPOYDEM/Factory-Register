@@ -4,9 +4,11 @@
              x:Class="Factory_Register.Views.ItemsPage"
              Title="{Binding Title}"
              xmlns:local="clr-namespace:Factory_Register.ViewModels"  
-             xmlns:model="clr-namespace:Factory_Register.Models"  
+             xmlns:model="clr-namespace:Factory_Register.Models"
              x:Name="BrowseItemsPage">
-
+    <!-- x:DataType="local:ItemsViewModel"-->
+    
+    
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Добавить" Command="{Binding AddItemCommand}" />
     </ContentPage.ToolbarItems>

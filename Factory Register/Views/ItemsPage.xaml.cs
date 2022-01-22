@@ -18,6 +18,7 @@ namespace Factory_Register.Views
 
         public ItemsPage()
         {
+
             InitializeComponent();
 
             BindingContext = _viewModel = new ItemsViewModel();

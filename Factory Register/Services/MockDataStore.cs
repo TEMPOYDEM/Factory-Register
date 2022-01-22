@@ -62,5 +62,11 @@ namespace Factory_Register.Services
         {
             return await Task.FromResult(_sqlConn.Table<Item>());
         }
+      /*  public static List<string> GetSearchResults(string queryString)
+        {
+            var item = new List<Item>();
+            var normalizedQuery = queryString?.ToLower() ?? "";
+            return item.Where(f => f.ToLowerInvariant().Contains(normalizedQuery)).ToList();
+        }*/
     }
 }
